@@ -1,0 +1,39 @@
+.header{
+    width: 100%;
+    position: relative;
+    height: 100px;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    background-color: #338ff9;  
+    display: flex;
+    align-items: center;
+}
+
+.header-logo{
+    margin-left: 130px;
+}
+
+.menu-bar{
+    position: absolute;
+    right: 70px;
+}
+
+.menu-bar a{
+  
+    width: 51px;
+    height: 16px;
+    padding: 36px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.menu-bar a:hover{
+    font-weight: bold;
+    cursor: pointer;
+    
+}
