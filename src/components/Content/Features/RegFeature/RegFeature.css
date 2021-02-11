@@ -1,3 +1,7 @@
+.reg-feature {
+    margin-top: 100px;
+}
+
 .info-name{
     display: flex;
     justify-content: center;
@@ -31,20 +35,4 @@
     line-height: 1.35;
     text-align: left;
     color: #ffffff;
-}
-
-.info-phones {
-    display: flex;
-    justify-content: center;
-}
-
-.info-phones img {
-    margin: 60px 80px 105px;
-}
-
-.procamps-logo {
-    width: 230px;
-    height: 33px;
-    margin: 60px 100px;
-    object-fit: contain;
 }
