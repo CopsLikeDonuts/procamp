@@ -23,6 +23,7 @@
 .info-desc{
     display: flex;
     justify-content: center;
+    height: 100px;
 }
 
 .info-desc span {

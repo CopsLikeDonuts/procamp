@@ -3,6 +3,7 @@ import Slider from '../Slider/Slider'
 import './RegFeature.css'
 
 const RegFeature = () => {
+    
     return (
         <div className='reg-feature'>
         <div className='info-name'>
