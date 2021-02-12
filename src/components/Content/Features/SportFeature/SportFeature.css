@@ -1,0 +1,33 @@
+.sport-wrapper{
+    height: 265px;
+    position: relative;
+}
+
+.sport-icons{
+    position: absolute;
+    width: 844px;
+    height: 145px;
+    top: 60px;
+    left: 26%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sport-icons img {
+    height: 44px;
+}
+
+.top {
+
+}
+
+.bottom {
+    margin-top: 100px;
+}
+
+.sport-logo{
+    position: absolute;
+    height: 149px;
+    top: 49px;
+    left: 31%;
+}

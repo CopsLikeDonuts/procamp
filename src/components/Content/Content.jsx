@@ -1,14 +1,17 @@
 import React from 'react';
 import BackButton from './BackButton/BackButton';
 import GeneralInfo from './GeneralInfo/GeneralInfo';
-import RegFeature from './Features/RegFeature/RegFeature';
+import Features from './Features/Features';
+import ContactForm from './ContactForm/ContactForm';
 
-const Content = () => {
+const Content = (props) => {
     return (
         <>
             <BackButton/>
             <GeneralInfo/>
-            <RegFeature/>
+            <Features state={props.state}
+                      options={props.options}/>
+            <ContactForm/>
         </>
         
     )

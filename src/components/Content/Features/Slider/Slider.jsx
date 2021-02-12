@@ -11,30 +11,30 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 
 SwiperCore.use([Pagination, Scrollbar]);
 
-const Slider = () => {
+const Slider = (props) => {
+  const slides = props.state;
+  let frames = slides.map(slide => {
+    let src = './slide-frames/' + slide + '.png'
+    return <SwiperSlide><img src={src} className='frame' alt={src}></img></SwiperSlide>
+  });
   return (
-    <div>
-    <Swiper
-      spaceBetween={200}
-      slidesPerView={5}
-      // scrollbar={{ draggable: false, dragSize: 'auto' }}
-      pagination={{ clickable: true, type: 'custom'}}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-      centeredSlides={true}
-    >
-      <SwiperSlide><img src='./slide-frames/slide1.png' className='frame'></img></SwiperSlide>
-      <SwiperSlide><img src='./slide-frames/slide2.png' className='frame'></img></SwiperSlide>
-      <SwiperSlide><img src='./slide-frames/slide3.png' className='frame'></img></SwiperSlide>
-      <SwiperSlide><img src='./slide-frames/slide4.png' className='frame'></img></SwiperSlide>
-      <SwiperSlide><img src='./slide-frames/slide5.png' className='frame'></img></SwiperSlide>
-      <SwiperSlide><img src='./slide-frames/slide6.png' className='frame'></img></SwiperSlide>
-      <SwiperSlide><img src='./slide-frames/slide7.png' className='frame'></img></SwiperSlide>
-
-    </Swiper>
     
-    <div className='test'></div>
+    <div className='slide-wrapper'>
+        <Swiper
+          spaceBetween={100}
+          slidesPerView={4}
+          scrollbar={{ draggable: true, dragSize: 100}}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+          centeredSlides={true}
+        >
+          { frames }
+          <img  src='./slide-frames/mobile-frame.png' alt='mobile-frame' className='mobile-frame'>
+          </img>
+        </Swiper>
     </div>
+    
+    
   );
 };
 

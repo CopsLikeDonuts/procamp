@@ -3,11 +3,12 @@ import './App.css';
 import Header from './components/Header/Header';
 import Content from './components/Content/Content'
 
-function App() {
+function App(props) {
   return (
     <>
       <Header/>
-      <Content/>
+      <Content state={props.state}
+               options={props.options}/>
     </>
     
     // <Footer/>
