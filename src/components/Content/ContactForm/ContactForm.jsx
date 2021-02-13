@@ -35,56 +35,61 @@ export default class ContactFrom extends Component {
       }
     
     handleSubmit(){
-        
+
     }
 
       render(){
         return (
             <div className='form-wrapper'>
-                <div className='reg-info'>
-                    <span>have an idea? contact us!</span>
+                <div className='form-info'>
+                    <div className='info-name'>
+                        <span>have an idea? contact us!</span>
+                    </div>
+                    <div className='contact-email'>
+                        <p className='email-text'>Use this form or write to us on <a href='mailto:hello@ideasoft.io' className='email-text'>hello@ideasoft.io</a></p>
+                    </div>
+                    <form className='contact-form' onSubmit={this.handleSubmit} method='POST'>
+                        <div className='contact-field-wrapper'>
+                            <label htmlFor='name'>your name*</label>
+                            <input type="text" className="contact-header" 
+                                value={this.state.name} 
+                                onChange={this.onNameChange}
+                                placeholder='Allan Barrett' />
+                        </div>
+                        <div className='contact-field-wrapper'>
+                            <div className='contact-field'>
+                                <label htmlFor="email">your email*</label>
+                                <input type="text" 
+                                    className="contact-info" 
+                                    aria-describedby="emailHelp" 
+                                    value={this.state.email} 
+                                    onChange={this.onEmailChange}
+                                    placeholder='allanbarret@gmail.com' />
+                            </div>
+                            <div className='contact-field'>
+                                <label htmlFor="phone">your phone number</label>
+                                <input type="text" 
+                                    className="contact-info" 
+                                    value={this.state.phone} 
+                                    onChange={this.onPhoneChange}
+                                    placeholder='0671111111' />
+                            </div>
+                            
+                        </div>
+                        <div className='contact-field-wrapper'>
+                            <label htmlFor="question">do you have any questions or requests?</label>
+                            <textarea className="form-control" 
+                                    value={this.state.question} 
+                                    onChange={this.onQuestionChange} />
+                        </div>
+                            <input type='submit' value='CONTINUE' className='submit-btn'>
+                            </input>
+                    </form>
                 </div>
-                <div className='contact-email'>
-                    <p>Use this form or write to us on <span>hello@ideasoft.io</span></p>
-                </div>
-                <form className='contact-form' onSubmit={this.handleSubmit} method='POST'>
-                    <div className='contact-name'>
-                        <label htmlFor='name'>your name*</label>
-                        <input type="text" className="contact-header" 
-                               value={this.state.name} 
-                               onChange={this.onNameChange}
-                               placeholder='Allan Barrett' />
-                    </div>
-                    <div className='contact-email-phone'>
-                        <label htmlFor="email">your email*</label>
-                        <input type="text" 
-                            className="contact-info" 
-                            aria-describedby="emailHelp" 
-                            value={this.state.email} 
-                            onChange={this.onEmailChange}
-                            placeholder='allanbarret@gmail.com' />
-
-                        <label htmlFor="phone">your phone number</label>
-                        <input type="text" 
-                               className="contact-info" 
-                               aria-describedby="emailHelp" 
-                               value={this.state.phone} 
-                               onChange={this.onPhoneChange} />
-                    </div>
-                    <div>
-                        <label htmlFor="question">Message</label>
-                        <textarea className="form-control" 
-                                  value={this.state.question} 
-                                  onChange={this.onQuestionChange} />
-                    </div>
-                    <div>
-                        <span>continue</span>
-                        {/* <img></img> */}
-                    </div>
-                </form>
             </div>
         )
     }
+    // https://blog.mailtrap.io/react-contact-form/
 
 }
 
