@@ -3,9 +3,9 @@ import './LogoFeature.css';
 
 const LogoFeature = (props) => {
     const logos = props.state.logosData;
-    const logosFrame = logos.map(logo => {
+    const logosFrame = logos.map((logo, index) => {
         const src = './logos/' + logo + '.svg'
-        return <img src={src} alt={logo}></img>
+        return <img src={src} alt={logo} key={index}></img>
     });
     return (
         <div className='reg-feature'>

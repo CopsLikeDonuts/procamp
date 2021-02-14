@@ -1,0 +1,17 @@
+.info-desc{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+.info-desc span {
+    width: 770px;
+    height: 55px;
+    margin: 14px 17px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: left;
+    color: #ffffff;
+}

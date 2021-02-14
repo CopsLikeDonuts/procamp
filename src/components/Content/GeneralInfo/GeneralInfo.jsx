@@ -3,9 +3,9 @@ import './GeneralInfo.css'
 
 const GeneralInfo = () => {
     const infoImages = ['mobile-01-copy-1.png', 'mobile-01-copy-2.png', 'mobile-01-copy-3.png'];
-    const images = infoImages.map(imageSrc => {
+    const images = infoImages.map((imageSrc, index) => {
         const src = './info-content/' + imageSrc;
-        return <img src={src}></img>
+        return <img src={src} alt={src} key={index}></img>
     });
     return (
         <div className='general-info'>

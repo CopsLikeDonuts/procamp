@@ -5,10 +5,12 @@
 
 .sport-icons{
     position: absolute;
-    width: 844px;
+    width: 950px;
     height: 145px;
-    top: 60px;
-    left: 26%;
+    top: 49%;
+    left: 50%;
+    right: 50%;
+    transform:translate(-50%, -50%);
     display: flex;
     justify-content: space-between;
 }
@@ -17,17 +19,12 @@
     height: 44px;
 }
 
-.top {
-
-}
-
 .bottom {
     margin-top: 100px;
 }
 
 .sport-logo{
     position: absolute;
-    height: 149px;
     top: 49px;
     left: 31%;
 }

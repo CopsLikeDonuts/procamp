@@ -6,10 +6,10 @@ const Header = () => {
         <div className='header'>
             <img src='logo.png' alt='header-logo' className='header-logo'></img>
             <div className='menu-bar'>
-                <a>HOME</a>
-                <a>PROJECTS</a>
-                <a>OUR TEAM</a>
-                <a>CONTACT US</a>
+                <p>HOME</p>
+                <p>PROJECTS</p>
+                <p>OUR TEAM</p>
+                <p>CONTACT US</p>
             </div>
         </div>
     );

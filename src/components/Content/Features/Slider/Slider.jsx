@@ -13,9 +13,9 @@ SwiperCore.use([Pagination, Scrollbar]);
 
 const Slider = (props) => {
   const slides = props.state;
-  let frames = slides.map(slide => {
+  let frames = slides.map((slide, index) => {
     let src = './slide-frames/' + slide + '.png'
-    return <SwiperSlide><img src={src} className='frame' alt={src}></img></SwiperSlide>
+    return <SwiperSlide key={index}><img src={src} className='frame' alt={src}></img></SwiperSlide>
   });
   return (
     
@@ -24,8 +24,6 @@ const Slider = (props) => {
           spaceBetween={100}
           slidesPerView={4}
           scrollbar={{ draggable: true, dragSize: 100}}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
           centeredSlides={true}
         >
           { frames }

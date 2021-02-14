@@ -1,0 +1,17 @@
+.info-name{
+    display: flex;
+    justify-content: center;
+}
+
+.info-name span{
+    font-family: ApexNew, sans-serif;
+    margin-bottom: 30px;
+    font-size: 29px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    color: #ffffff;
+}

@@ -5,7 +5,7 @@ import './RegFeature.css'
 const RegFeature = (props) => {
     
     return (
-        <div className='reg-feature'>
+        <div className='info-block'>
             <div className='info-name'>
                 <span>FEATURE 1</span>
             </div>

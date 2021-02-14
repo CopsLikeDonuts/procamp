@@ -6,12 +6,12 @@ import Options from './Options/Options';
 const SportFeature = (props) => {
     
     const icons = ['tennis', 'american-football', 'basketball', 'field-hockey', 'baseball', 'hockey', 'football', 'tennis2', 'golf']
-    const sportIcons = icons.map(icon => {
+    const sportIcons = icons.map((icon, index) => {
         const src = './sports/' + icon + '.svg'
         if (icons.indexOf(icon) % 2 !== 0){
-            return <img src={src} alt={icon} className='bottom'></img>
+            return <img src={src} alt={icon} className='bottom' key={index}></img>
         } else {
-            return <img src={src} alt={icon}></img>
+            return <img src={src} alt={icon} key={index}></img>
         }
         
     });

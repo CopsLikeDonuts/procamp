@@ -3,13 +3,13 @@ import './Options.css';
 import Option from './Option/Option';
 
 const Options = (props) => {
-    console.log(props);
     const options = props.options;
-    let optionElements = options.map(option => {
+    let optionElements = options.map((option, index) => {
         return <Option title={option.title}
                        image={option.image}
                        alt={option.alt}
                        desc={option.desc}
+                       key={index}
                        >    
                        </Option>
     })

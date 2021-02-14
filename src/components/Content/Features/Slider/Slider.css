@@ -9,7 +9,6 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -26,12 +25,14 @@
   }
 
 
-
 .mobile-frame{
     position: absolute;
-    margin-left: 781px;
     z-index: 1;
-    top: 9.6%;
+    /* top: 9.6%; */
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    
 }
 .swiper-slide img{
     opacity: 60%;
@@ -43,10 +44,13 @@
 }
 
 .swiper-scrollbar {
+    position: absolute;
     height: 2px !important;
     background: #ffffff !important;
     width: 560px !important;
-    margin-left: 600px;
+    left: 50% !important;
+    right: 50% !important;
+    transform:translate(-50%, -50%);
     display: block !important;
 }
 

@@ -27,15 +27,16 @@ export default class ContactFrom extends Component {
       }
 
     onPhoneChange(event) {
-        this.setState({email: event.target.value})
+        this.setState({phone: event.target.value})
       }
     
     onMessageChange(event) {
         this.setState({message: event.target.value})
       }
     
-    handleSubmit(){
-
+    handleSubmit(e){
+        e.preventDefault();
+        console.log(this.state); 
     }
 
       render(){
@@ -68,7 +69,8 @@ export default class ContactFrom extends Component {
                             </div>
                             <div className='contact-field'>
                                 <label htmlFor="phone">your phone number</label>
-                                <input type="text" 
+                                <input type="number"
+                                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" 
                                     className="contact-info" 
                                     value={this.state.phone} 
                                     onChange={this.onPhoneChange}

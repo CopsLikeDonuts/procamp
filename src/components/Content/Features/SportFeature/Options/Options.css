@@ -1,7 +1,7 @@
 .options-wrapper{
     display: flex;
-    margin-top: 100px;
-    margin-left: 18%;
+    padding-top: 100px;
+    margin: 0 auto;
     width: 1136px;
     justify-content: space-around;
 }
