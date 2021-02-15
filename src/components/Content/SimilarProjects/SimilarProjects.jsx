@@ -1,7 +1,8 @@
 import React from "react";
 import './SimilarProjects.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, {Autoplay} from 'swiper'; 
+import SwiperCore, {Autoplay} from 'swiper';
+import Title from '../Title/Title'; 
 
 // Import Swiper styles
 import 'swiper/swiper.scss';
@@ -11,7 +12,7 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 
 SwiperCore.use([Autoplay]);
 
-const SimilarProjects = () => {
+const SimilarProjects = (props) => {
   const slides = ['carousel1', 'carousel2', 'carousel3'];
   let frames = slides.map((slide, index) => {
     let src = './carousel/' + slide + '.jpg'
@@ -20,9 +21,7 @@ const SimilarProjects = () => {
   return (
     <div className='simproj-wrapper'>
         <div className='slide-wrapper'>
-            <div className='info-name'>
-                <span>similar projects</span>
-            </div>
+            <Title titles={props.titles}/>
             <Swiper
             spaceBetween={500}
             slidesPerView={3}

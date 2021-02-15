@@ -1,18 +1,14 @@
 import React from 'react';
 import './ProfileFeature.css';
 import Slider from '../Slider/Slider';
+import Title from '../../Title/Title';
+import Text from '../../Text/Text'
 
 const ProfileFeature = (props) => {
     return (
         <div className='reg-feature'>
-            <div className='info-name'>
-                <span>FEATURE 3</span>
-            </div>
-            <div className='info-desc'>
-                <span>
-                Maecenas condimentum sem mattis ligula vestibulum, sit amet mollis dui tristique. Integer viverra lectus vitae molestie congue. In hac habitasse platea dictumst. Sed vel ante enim. Quisque bibendum lacus a mattis euismod.
-                </span>
-            </div>
+            <Title titles={props.titles}/>
+            <Text texts={props.texts}/>
             <Slider state={props.state.friendsData}/>
         </div>
     )

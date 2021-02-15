@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './ContactForm.css';
 
+
 export default class ContactFrom extends Component {
     constructor(props){
         super(props);
@@ -10,6 +11,8 @@ export default class ContactFrom extends Component {
             phone: '',
             message: ''
         }
+        
+        
 
         this.onNameChange = this.onNameChange.bind(this);
         this.onEmailChange = this.onEmailChange.bind(this);
@@ -17,6 +20,8 @@ export default class ContactFrom extends Component {
         this.onMessageChange = this.onMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+    
+    
 
     onNameChange(event) {
         this.setState({name: event.target.value})
@@ -40,11 +45,14 @@ export default class ContactFrom extends Component {
     }
 
       render(){
+        
         return (
             <div className='form-wrapper'>
                 <div className='form-info'>
-                    <div className='info-name'>
-                        <span>have an idea? contact us!</span>
+                    <div className='info-title'>
+                        <span>
+                            have an idea? contact us!
+                        </span>
                     </div>
                     <div className='contact-email'>
                         <p className='email-text'>Use this form or write to us on <a href='mailto:hello@ideasoft.io' className='email-text'>hello@ideasoft.io</a></p>
@@ -91,8 +99,6 @@ export default class ContactFrom extends Component {
             </div>
         )
     }
-    // https://blog.mailtrap.io/react-contact-form/
-
 }
 
 

@@ -6,14 +6,18 @@ import ContactForm from './ContactForm/ContactForm';
 import SimilarProjects from './SimilarProjects/SimilarProjects';
 
 const Content = (props) => {
+    console.log(props);
     return (
         <>
             <BackButton/>
-            <GeneralInfo/>
+            <GeneralInfo titles={props.titles}
+                         texts={props.texts}/>
             <Features state={props.state}
-                      options={props.options}/>
+                      options={props.options}
+                      titles={props.titles}
+                      texts={props.texts}/>
             <ContactForm/>
-            <SimilarProjects/>
+            <SimilarProjects titles={props.titles.simprojTitle}/>
         </>
         
     )

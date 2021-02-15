@@ -1,5 +1,6 @@
 import React from 'react';
 import './LogoFeature.css';
+import Title from '../../Title/Title';
 
 const LogoFeature = (props) => {
     const logos = props.state.logosData;
@@ -9,9 +10,7 @@ const LogoFeature = (props) => {
     });
     return (
         <div className='reg-feature'>
-            <div className='info-name'>
-                <span>some logos</span>
-            </div>
+            <Title titles={props.titles}/>
             <div className='logos'>
                 {logosFrame}
             </div>

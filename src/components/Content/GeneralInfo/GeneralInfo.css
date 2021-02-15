@@ -1,9 +1,9 @@
-.info-name{
+.info-header{
     display: flex;
     justify-content: center;
 }
 
-.info-name span{
+.info-header span{
     font-family: ApexNew, sans-serif;
     margin-bottom: 30px;
     font-size: 46px;
@@ -16,22 +16,6 @@
     color: #ffffff;
 }
 
-.info-desc{
-    display: flex;
-    justify-content: center;
-}
-
-.info-desc span {
-    width: 770px;
-    height: 55px;
-    margin: 14px 17px;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.35;
-    text-align: left;
-    color: #ffffff;
-}
 
 .info-phones {
     display: flex;

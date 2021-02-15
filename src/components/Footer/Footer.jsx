@@ -1,12 +1,11 @@
 import React from 'react';
 import './Footer.css';
+import Title from '../Content/Title/Title';
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <>
-            <div className='info-name'>
-                <span>thank for all your efforts!</span>
-            </div>
+            <Title titles={props.titles}/>
             <img src='logo.png' className='footer-logo' alt='footer-logo'></img>
         </>
     )

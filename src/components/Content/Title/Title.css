@@ -1,9 +1,10 @@
-.info-name{
+.info-title{
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
-.info-name span{
+.info-title span{
     font-family: ApexNew, sans-serif;
     margin-bottom: 30px;
     font-size: 29px;

@@ -10,12 +10,20 @@ const Features = (props) => {
     
     return (
         <>
-            <RegFeature state={props.state}/>
+            <RegFeature state={props.state}
+                        titles={props.titles.infoTitle}
+                        texts={props.texts.regFeature}/>
             <SportFeature state={props.state}
-                          options={props.options}/>
-            <ProfileFeature state={props.state}/>
-            <LogoFeature state={props.state}/>
-            <SummaryFeature/>
+                          options={props.options}
+                          titles={props.titles.sportsTitle}
+                          texts={props.texts}/>
+            <ProfileFeature state={props.state}
+                            titles={props.titles.profileTitle}
+                            texts={props.texts.profileFeature}/>
+            <LogoFeature state={props.state}
+                         titles={props.titles.logosTitle}/>
+            <SummaryFeature titles={props.titles.summaryTitle}
+                            texts={props.texts}/>
         </>
     )
 }
